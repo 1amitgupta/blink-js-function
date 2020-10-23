@@ -3,20 +3,19 @@
  * Published by  : F1Mate
  * Publisher URL : https://f1mate.com
  * Contributors  : f1mate, 1amitgupta (Github)
- * Version       : v1.00
+ * Version       : v1.001
  * Github URL    : https://github.com/f1mate/blink-js-function
  */
 
 /**
  * 
- * @param {String} ele_id <p>Element ID</p>
+ * @param {String} id <p>Element ID</p>
  */
-function blinkJs(ele_id) {
-  let f = document.getElementById(ele_id);
-  if (f) {
+function blinkJs(id) {
+  let ele = document.getElementById(id);
+  if (ele) {
     setInterval(function() {
-      //f.style.display = (f.style.display == 'none' ? '' : 'none');
-      f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
+      ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden');
     }, 1000);
   }
 }
